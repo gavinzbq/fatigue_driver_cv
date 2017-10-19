@@ -8,7 +8,7 @@ Efficient Car Alarming System for Fatigue Detection during Driving (2012)
 Idea
 ----
 
-The algorithm work in three stages:
+The algorithm works in three stages:
 
 1. the face of the driver is detected and tracked.
 2. the facial features are extracted for further processing.
@@ -21,11 +21,11 @@ The algorithm work in three stages:
     :alt: image
 
 
-Technologies Involved
----------------------
+Technology Involved
+-------------------
 
-- **Face detection** is done by using Viola and Jones algorithm.
-- **Eye deetection** is done by using edge detection. "Canny Edge detector", "Sobel Edge detector"
+- **Face detection** is done by using *Viola and Jones algorithm*.
+- **Eye deetection** is done by using edge detection. *Canny Edge detector*, *Sobel Edge detector*.
 - **Eye Status detection**, intensity change, for example, in eyebrow, upper edge and lower edge of eye.
 
 
@@ -45,7 +45,7 @@ Signs / Symptoms of Drowsiness
 - Poor concentration (ignore for now)
 - Slow reactions (ignore for now)
 
-.. note:: This paper focuses on the features related to **eye** and **mouth** like frequent blinking and yawning. 
+.. note:: This paper focuses on the features related to **eye** and **mouth**, like frequent blinking and yawning. 
 
 Idea
 ----
@@ -179,9 +179,9 @@ Classification
 - Low value of EAR doesn't necessarily mean a person is blinking. e.g. close eyes intentionally for a longer time, facial expression, yawning etc.
 - Training samples: 6 frames before and after an eye is the most closed when blinking.
 - For each frame,a 13-dimensional feature is gathered by concatenating the EARs of its neighboring frames.
-- The classifier is implemented by a linear SVM trained from manually annotated sequences. 
+- The classifier is implemented by a linear SVM trained from manually annotated sequences.
 
-Accuracy of facial landmark detectors
+Accuracy of Facial Landmark Detectors
 -------------------------------------
 
 Two state-of-the-art landmark detectors were tested: *Chehra* and *Intraface*.
@@ -195,7 +195,7 @@ Conclusion
 
 3. For larger images, the ratio is estimated precisely enough to ensure a reliable eye blink detection.
 
-Eye blink detector evaluation
+Eye Blink Detector Evaluation
 -----------------------------
 
 The EAR thresholding method lags behind EAR SVN classifiers. 
