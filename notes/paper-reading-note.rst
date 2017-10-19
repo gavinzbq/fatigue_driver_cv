@@ -167,4 +167,37 @@ Eye Aspect Ratio (EAR) is defined as:
     :scale: 50 %
     :alt: image
     :align: left
+    
+Eye Blink Detection
+-------------------
+
+An SVM classifier is trained to detects eye blinks as a pattern of EAR values in a short temporal window. 
+
+Classification
+--------------
+
+- Low value of EAR doesn't necessarily mean a person is blinking. e.g. close eyes intentionally for a longer time, facial expression, yawning etc.
+- Training samples: 6 frames before and after an eye is the most closed when blinking.
+- For each frame,a 13-dimensional feature is gathered by concatenating the EARs of its neighboring frames.
+- The classifier is implemented by a linear SVM trained from manually annotated sequences. 
+
+Accuracy of facial landmark detectors
+-------------------------------------
+
+Two state-of-the-art landmark detectors were tested: *Chehra* and *Intraface*.
+
+Conclusion
+~~~~~~~~~~
+
+1. For eye landmarks only, *Intraface* is always more precise than *Chehra*. Additionally, the *Intraface* is much more robust to small images.
+
+2. For accuracy of EAR, the error is higher for closed eyes. The reason is that both detectors are more likely to output open eyes in case of a failure.
+
+3. For larger images, the ratio is estimated precisely enough to ensure a reliable eye blink detection.
+
+Eye blink detector evaluation
+-----------------------------
+
+The EAR thresholding method lags behind EAR SVN classifiers. 
+e.g. The thresholding fails when a subject smiles (narrow eyes) 
 
